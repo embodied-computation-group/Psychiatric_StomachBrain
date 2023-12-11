@@ -40,3 +40,7 @@ Note: data & scripts for preprocessed standard deviation of BOLD, and resting co
 12. Control Spearman correlations of psychiatric variate from stomach-brain CCA with EGG metrics:
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/EGGmetric_PsychVariate_Correlations/PsychCCAvariate_EGGmetric_correlations.Rmd
 
+--------------------------------------------------------------------------------------------------------
+
+13. Extra psych plots & diagnosis cutoff percentages script:
+    Psychiatric_StomachBrain/scripts/psych_data/psych_inputplots_andcutoffs.Rmd
