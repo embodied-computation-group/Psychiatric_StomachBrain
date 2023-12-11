@@ -1,4 +1,4 @@
-# CCA/PLS Toolkit
+# CCA/PLS Toolkit - LB edited
 
 Example for running CCA with CCA-PLS toolkit is in 'RunCCA.m'
 
