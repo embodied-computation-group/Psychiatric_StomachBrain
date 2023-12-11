@@ -1,5 +1,7 @@
 # Scripts for psychiatric stomach-brain coupling CCA
 
+Note: data & scripts for raw/preprocessed fMRI, raw physio, and raw survey individual subject data stored in Visceral Mind Project BIDS structure:
+
 1. Prepare stomach-brain coupling (phase locking value) data for CCA (empirical - chance PLV, and DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/CCAprepStomachBrain.ipynb
 
@@ -23,6 +25,8 @@
 --------------------------------------------------------------------------------------------------------
 Extra scripts for control analyses:
 
+Note: data & scripts for preprocessed standard deviation of BOLD, and resting connectivity individual subject data stored in Visceral Mind Project BIDS structure:
+
 8. Prepare control standard deviation of BOLD activity for CCA (DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/ControlCCAs/CCAprepControlSTD.ipynb
 
@@ -33,4 +37,6 @@ Extra scripts for control analyses:
 
 11. Run 9-10 for resting connectivity control CCA (commented in 9. replacing STD BOLD for resting connectvity data).
 
-12. 
+12. Control Spearman correlations of psychiatric variate from stomach-brain CCA with EGG metrics:
+    Psychiatric_StomachBrain/scripts/CCA/Control_analyses/EGGmetric_PsychVariate_Correlations/PsychCCAvariate_EGGmetric_correlations.Rmd
+
