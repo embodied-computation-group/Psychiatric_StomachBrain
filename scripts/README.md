@@ -2,45 +2,56 @@
 
 Note: data & scripts for raw/preprocessed fMRI, raw physio, and raw survey individual subject data stored in Visceral Mind Project BIDS structure:
 
-1. Prepare stomach-brain coupling (phase locking value) data for CCA (empirical - chance PLV, and DiFuMo parcellate):
+1. Preprocess EGG data for stomach-brain coupling estimation (& compute EGG metrics for physiological control analyses (14.)):
+    Psychiatric_StomachBrain/scripts/EGG_preproc_metrics/A_Segment_EGG.m
+    Psychiatric_StomachBrain/scripts/EGG_preproc_metrics/B_Preprocess_EGG.m
+    Psychiatric_StomachBrain/scripts/EGG_preproc_metrics/C_Compute_EGGmeasures.m
+
+2. Stomach-brain coupling estimation:
+
+
+--------------------------------------------------------------------------------------------------------
+
+3. Prepare stomach-brain coupling (phase locking value) data for CCA (empirical - chance PLV, and DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/CCAprepStomachBrain.ipynb
 
-2. Create matched input matrices for CCA (X = stomach-brain coupling, Y = psych data, C = confounds. Outliers removes & rows across matrices matched as same participants):
+4. Create matched input matrices for CCA (X = stomach-brain coupling, Y = psych data, C = confounds. Outliers removes & rows across matrices matched as same participants):
     Psychiatric_StomachBrain/scripts/CCA/CCAprepAllData.m
 
-3. X.mat, Y.mat & C.mat from (2.) saved in: 'Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/data', and framework folder created: '/home/leah/Git/Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/framework'
+5. X.mat, Y.mat & C.mat from (2.) saved in: 'Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/data', and framework folder created: '/home/leah/Git/Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/framework'
 
-4. Run CCA with CCA/PLS toolkit (run on cluster via Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/cca_jobs_slurm.sh):
+6. Run CCA with CCA/PLS toolkit (run on cluster via Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/cca_jobs_slurm.sh):
     Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/RunCCA.m
 
-5. Plot CCA result (variate scatterplot, psych loading barplot, extraction of cca mode result details):
+7. Plot CCA result (variate scatterplot, psych loading barplot, extraction of cca mode result details):
     Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/CCA_plots.m
 
-6. Plot CCA result: stomach-brain coupling loadings projected on DiFuMo parcellated brain:
+8. Plot CCA result: stomach-brain coupling loadings projected on DiFuMo parcellated brain:
     Psychiatric_StomachBrain/scripts/CCA/CCA_plotting/CCA_Brain_Figures.ipynb
 
-7. Create averaged summary plots of CCA loadings (for both psych and stomach-brain):
+9. Create averaged summary plots of CCA loadings (for both psych and stomach-brain):
     Psychiatric_StomachBrain/scripts/CCA/CCA_plotting/Averaged_loadings_plots.ipynb
 
 --------------------------------------------------------------------------------------------------------
+
 Extra scripts for control analyses:
 
 Note: data & scripts for preprocessed standard deviation of BOLD, and resting connectivity individual subject data stored in Visceral Mind Project BIDS structure:
 
-8. Prepare control standard deviation of BOLD activity for CCA (DiFuMo parcellate):
+10. Prepare control standard deviation of BOLD activity for CCA (DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/ControlCCAs/CCAprepControlSTD.ipynb
 
-9. Create matched input matrices for CCA (X = Control STD BOLD, Y = psych data, C = confounds. Rows across matrices matched as same participants):
+11. Create matched input matrices for CCA (X = Control STD BOLD, Y = psych data, C = confounds. Rows across matrices matched as same participants):
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/ControlCCAs/CCAprepAllData_controls.m
 
-10. Repeat 3-4 but with results from (9.).
+12. Repeat 3-4 but with results from (9.).
 
-11. Run 9-10 for resting connectivity control CCA (commented in 9. replacing STD BOLD for resting connectvity data).
+13. Run 9-10 for resting connectivity control CCA (commented in 9. replacing STD BOLD for resting connectvity data).
 
-12. Control Spearman correlations of psychiatric variate from stomach-brain CCA with EGG metrics:
+14. Control Spearman correlations of psychiatric variate from stomach-brain CCA with EGG metrics:
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/EGGmetric_PsychVariate_Correlations/PsychCCAvariate_EGGmetric_correlations.Rmd
 
 --------------------------------------------------------------------------------------------------------
 
-13. Extra psych plots & diagnosis cutoff percentages script:
+15. Extra psych plots & diagnosis cutoff percentages script:
     Psychiatric_StomachBrain/scripts/psych_data/psych_inputplots_andcutoffs.Rmd
