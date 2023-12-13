@@ -15,7 +15,7 @@ Note: data & scripts for raw/preprocessed fMRI, raw physio, and raw survey indiv
 3. Prepare stomach-brain coupling (phase locking value) data for CCA (empirical - chance PLV, and DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/CCAprepStomachBrain.ipynb
 
-4. Create matched input matrices for CCA (X = stomach-brain coupling, Y = psych data, C = confounds. Outliers removes & rows across matrices matched as same participants):
+4. Create matched input matrices for CCA (X = stomach-brain coupling, Y = psych data, C = confounds. Outliers removed & participant rows across matrices matched):
     Psychiatric_StomachBrain/scripts/CCA/CCAprepAllData.m
 
 5. X.mat, Y.mat & C.mat from (2.) saved in: 'Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/data', and framework folder created: '/home/leah/Git/Psychiatric_StomachBrain/scripts/CCA/cca_pls_toolkit-master/_Project_StomachBrain/framework'
@@ -41,12 +41,12 @@ Note: data & scripts for preprocessed standard deviation of BOLD, and resting co
 10. Prepare control standard deviation of BOLD activity for CCA (DiFuMo parcellate):
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/ControlCCAs/CCAprepControlSTD.ipynb
 
-11. Create matched input matrices for CCA (X = Control STD BOLD, Y = psych data, C = confounds. Rows across matrices matched as same participants):
+11. Create matched input matrices for CCA (X = Control STD BOLD, Y = psych data, C = confounds. Participant rows across matrices matched):
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/ControlCCAs/CCAprepAllData_controls.m
 
-12. Repeat 3-4 but with results from (9.).
+12. Repeat 5-6 but with results from (11.).
 
-13. Run 9-10 for resting connectivity control CCA (commented in 9. replacing STD BOLD for resting connectvity data).
+13. Run 11-12 for resting connectivity control CCA (commented in 11. replacing STD BOLD for resting connectvity data).
 
 14. Control Spearman correlations of psychiatric variate from stomach-brain CCA with EGG metrics:
     Psychiatric_StomachBrain/scripts/CCA/Control_analyses/EGGmetric_PsychVariate_Correlations/PsychCCAvariate_EGGmetric_correlations.Rmd
