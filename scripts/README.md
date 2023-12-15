@@ -8,7 +8,10 @@ Note: data & scripts for raw/preprocessed fMRI, raw physio, and raw survey indiv
     Psychiatric_StomachBrain/scripts/EGG_preproc_metrics/C_Compute_EGGmeasures.m
 
 2. Stomach-brain coupling estimation:
-
+    Psychiatric_StomachBrain/scripts/stomachbrain_couping/0B_tsv2csv_confounds.sh
+    Psychiatric_StomachBrain/scripts/stomachbrain_couping/scriptslurm_reslice_smooth_masksAndBold.sh
+    Psychiatric_StomachBrain/scripts/stomachbrain_couping/scriptslurm_mainpipeline.sh
+    Psychiatric_StomachBrain/scripts/stomachbrain_couping/scriptslurm_surrogatePLV_medianrotation.sh
 
 --------------------------------------------------------------------------------------------------------
 
